@@ -1,0 +1,34 @@
+write an MKBHD script for the macbook air M2 
+--------------------------
+INT. MACBOOK AIR M2
+
+MKBHD sits at a desk, holding the new MacBook Air M2 in his hands.
+
+MKBHD:
+Hey everyone, MKBHD here, and today we're taking a look at the new MacBook Air M2.
+
+MKBHD opens the laptop and the screen comes to life, displaying the macOS desktop.
+
+MKBHD:
+First off, let's talk about the design. This new MacBook Air has a stunning Retina display with True Tone technology, which automatically adjusts the color temperature of the screen to match the ambient lighting in the room.
+
+MKBHD runs his fingers over the keyboard and trackpad, showing off the smooth, responsive feel.
+
+MKBHD:
+The keyboard on this laptop is a real standout feature. It's the new Magic Keyboard, which has a redesigned scissor mechanism that provides 1 millimeter of key travel for a more comfortable and accurate typing experience. And the trackpad is just as impressive, with Force Touch technology that allows you to perform all kinds of gestures and actions.
+
+MKBHD picks up the MacBook Air and holds it in front of the camera.
+
+MKBHD:
+But the best part about this laptop is how thin and light it is. At just 2.8 pounds, it's one of the lightest laptops on the market. And with its sleek, tapered design, it's the perfect laptop for on-the-go.
+
+MKBHD:
+Under the hood, this MacBook Air is powered by Apple's M2 chip, which provides lightning-fast performance and improved energy efficiency. It also has a ton of storage, with options for up to 2 terabytes of SSD storage.
+
+MKBHD:
+In conclusion, the MacBook Air M2 is a top-notch laptop that delivers on design, performance, and portability. If you're in the market for a new laptop, the MacBook Air M2 is definitely worth considering.
+
+MKBHD closes the laptop and smiles at the camera.
+
+MKBHD:
+Thanks for watching, and make sure to hit that subscribe button for more tech reviews.

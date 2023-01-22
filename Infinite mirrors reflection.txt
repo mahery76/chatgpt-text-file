@@ -1,0 +1,11 @@
+What would be the image seen in two mirrors placed face to face ?
+--------------------------
+If you place two mirrors facing each other, you will see an infinite number of reflections of the mirrors in the other mirror. This is because the reflection of one mirror in the other mirror will be reflected again in the first mirror, and so on. The images will become progressively smaller and more distorted as they recede into the distance. It's important to note that you will not be able to see the images with your naked eye, as they will be too small and too far away. However, you can use a camera or other visual recording device to capture the reflections.
+--------------------------
+Is there a known phenomen in this situation ?
+--------------------------
+Yes, the phenomenon of seeing an infinite number of reflections of two mirrors facing each other is known as an "infinite regression." This occurs because the reflections of the mirrors in each other create a never-ending series of images, as each reflection is reflected again in the other mirror.
+
+Infinite regressions can also occur in other contexts, such as in philosophical discussions about the nature of reality. For example, if we try to understand the nature of something by explaining it in terms of something else, and that something else is then explained in terms of something else, and so on, we can get caught in an infinite regression.
+
+In the case of the two mirrors facing each other, the phenomenon is primarily a visual one and can be observed and recorded through the use of a camera or other visual recording device. It is not a philosophical or conceptual concept.

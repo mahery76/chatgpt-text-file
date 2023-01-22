@@ -1,0 +1,191 @@
+how to export and import js file using common js in node environment ?
+--------------------------
+To export a JavaScript module in CommonJS format in a Node.js environment, you can use the module.exports or exports object.
+
+For example, if you have a file called myModule.js that contains the following:
+
+Copy code
+function myFunction() {
+    console.log("Hello, World!");
+}
+
+module.exports = myFunction;
+
+
+You can then import this module in another file using the require() function:
+
+Copy code
+const myModule = require('./myModule');
+myModule(); // outputs "Hello, World!"
+
+
+You can also export multiple functions or variables by attaching them to the exports object:
+
+Copy code
+exports.function1 = function() {...};
+exports.function2 = function() {...};
+exports.variable1 = "hello";
+
+
+and import them in another file like this:
+
+Copy code
+const { function1, function2, variable1 } = require('./myModule');
+
+
+You can also use module.exports to export an object with multiple properties:
+
+Copy code
+module.exports = {
+  function1: function() {...},
+  function2: function() {...},
+  variable1: "hello"
+};
+
+
+and import it in another file like this:
+
+Copy code
+const myModule = require('./myModule');
+
+--------------------------
+And how to import json file from another js file ?
+--------------------------
+You can import a JSON file in a JavaScript file using the require() function, just like you would with any other module.
+
+For example, if you have a file called data.json in the same directory as your JavaScript file, you can import it using the following code:
+
+Copy code
+const data = require('./data.json');
+console.log(data);
+
+
+You can also import a json file and parse it into a javascript object, you can use the JSON.parse() method.
+
+Copy code
+const fs = require('fs');
+let rawdata = fs.readFileSync('data.json');
+let data = JSON.parse(rawdata);
+console.log(data);
+
+
+Note that you need to have the fs module installed to be able to use the readFileSync() method.
+It's also worth mentioning that in case of large file size it's better to use fs.promises.readFile() instead of fs.readFileSync() as the latter may block the event loop which may cause performance issues.
+--------------------------
+And how to use path in order to import js file in a specific path ?
+--------------------------
+You can use the path module in Node.js to work with file and directory paths. The path module provides a way to work with file and directory paths, allowing you to create consistent and predictable file paths across different operating systems.
+
+To use the path module, you'll need to import it at the top of your JavaScript file:
+
+Copy code
+const path = require('path');
+
+
+To import a JavaScript file from a specific path, you can use the path.resolve() method to create the full file path. For example, if you have a file called myModule.js in a directory called src, you can import it using the following code:
+
+Copy code
+const myModule = require(path.resolve(__dirname, 'src', 'myModule.js'));
+
+
+The __dirname variable is a global variable that represents the current directory. By passing it as the first argument to path.resolve(), you are specifying that the path should be relative to the current directory. The second and third arguments, src and myModule.js, are used to specify the directory and file name, respectively.
+
+You can also use path.join() to create a path by joining multiple path segments together,
+
+Copy code
+const myModule = require(path.join(__dirname, 'src', 'myModule.js'));
+
+
+path.join() method is used to join all given path segments together using the platform specific separator as a delimiter, then normalize the resulting path.
+
+Note that, it's important to always use path.resolve() or path.join() instead of concatenating strings to create a file path in order to avoid issues caused by different operating systems using different path separators.
+--------------------------
+what if my file is located in one step backward out of the current js file directory ?
+--------------------------
+If your file is located one step backward out of the current JavaScript file directory, you can use the path.resolve() or path.join() method with '..' to navigate one step backward.
+
+For example, if your current JavaScript file is located in a directory called src, and the file you want to import is located in a directory called lib that is one level above the src directory, you can use the following code to import the file:
+
+Copy code
+const myModule = require(path.resolve(__dirname, '..', 'lib', 'myModule.js'));
+
+
+or
+
+Copy code
+const myModule = require(path.join(__dirname, '..', 'lib', 'myModule.js'));
+
+
+The '..' argument in the above code tells Node.js to navigate one level up the directory tree.
+
+You can also use multiple '..' arguments to navigate multiple levels up the directory tree. For example, if you want to navigate two levels up the directory tree, you can use the following code:
+
+Copy code
+const myModule = require(path.resolve(__dirname, '..', '..', 'lib', 'myModule.js'));
+
+
+or
+
+Copy code
+const myModule = require(path.join(__dirname, '..', '..', 'lib', 'myModule.js'));
+
+
+It's important to note that using '..' is relative to the current file, So if you use it in multiple files and they are located in different places, it will navigate to different directories.
+--------------------------
+So how to use import and export using ES6 syntax 
+--------------------------
+In ECMAScript 6 (ES6), the syntax for importing and exporting modules is slightly different from CommonJS.
+
+To export a module in ES6, you can use the export keyword. For example, if you have a file called myModule.js that contains the following:
+
+Copy code
+export function myFunction() {
+    console.log("Hello, World!");
+}
+
+
+You can also use export to export multiple functions or variables:
+
+Copy code
+export function function1() {...}
+export function function2() {...}
+export const variable1 = "hello";
+
+
+To import a module in ES6, you can use the import keyword. For example, you can import the myFunction function from myModule.js using the following code:
+
+Copy code
+import { myFunction } from './myModule';
+myFunction(); // outputs "Hello, World!"
+
+
+You can also import all functions and variable from the module by using *
+
+Copy code
+import * as myModule from './myModule';
+myModule.function1();
+console.log(myModule.variable1);
+
+
+You can also give an alias name to the imported module by using as keyword
+
+Copy code
+import { myFunction as myFunc } from './myModule';
+myFunc(); // outputs "Hello, World!"
+
+
+It's worth mentioning that the import and export statements must be at the top level of a file, you can't use them inside a function or a block statement.
+
+In addition, you can also use default exports, where you can only have one default export per module, you can use export default statement to export the default export, and use import statement without curly braces {} to import it.
+
+Copy code
+export default function myFunction() {...}
+
+
+and import it like this
+
+Copy code
+import myFunction from './myModule';
+
+
+Please note that the import and export syntax using ES6 is only supported in modern browsers and Node.js version > 6. If you need to support older environments, you'll need to use a transpiler such as Babel to convert the ES6 code to a version that is compatible with older environments.

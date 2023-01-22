@@ -1,0 +1,124 @@
+the difference between pull and push in git command
+--------------------------
+In Git, "pull" is a command that retrieves changes from a remote repository and merges them with the local repository. "Push" is a command that sends changes from the local repository to a remote repository.
+
+A "pull" is essentially a combination of a "fetch" and a "merge". A "fetch" retrieves the changes from a remote repository but doesn't merge them, whereas a "pull" retrieves the changes and automatically merges them with the local repository.
+
+A "push" sends the commits from the local repository to the remote repository, updating the remote repository with the local changes.
+--------------------------
+example of each of those commands
+--------------------------
+Here are some examples of using the "pull" and "push" commands in Git:
+
+Pull command:
+
+Copy code
+git pull origin master
+
+
+This command will retrieve changes from the "origin" remote repository's "master" branch and merge them with the local "master" branch.
+
+Push command:
+
+Copy code
+git push origin mybranch
+
+
+This command will send the changes from the local "mybranch" branch to the "origin" remote repository's "mybranch" branch.
+
+Please note that in both examples, "origin" is the name of a remote repository and "master" or "mybranch" are the names of branches, you may use different names based on your own repository setup.
+--------------------------
+github command to authenticate in terminal
+--------------------------
+To authenticate with GitHub in the terminal, you can use the git command and the remote command.
+
+To authenticate using HTTPS:
+
+Copy code
+git remote set-url origin https://username:password@github.com/username/repository.git
+
+
+To authenticate using SSH:
+
+Copy code
+git remote set-url origin git@github.com:username/repository.git
+
+
+You will need to replace "username" with your GitHub username and "repository" with the name of the repository you want to connect to.
+
+Please note that using your password in the command line is not recommended as the command will be visible in your shell history and other users who have access to your system may be able to see it. A more secure way of doing this would be to use an access token.
+You can create a token in GitHub by visiting your settings > Developer settings > Personal access tokens and then use that token in place of the password in the command.
+
+Copy code
+git remote set-url origin https://<TOKEN>@github.com/username/repository.git
+
+
+You can also use ssh key to authenticate.
+Please refer to GitHub documentation on how to set up ssh keys.
+--------------------------
+how to setup with ssh
+--------------------------
+To set up SSH authentication with GitHub, you will need to generate an SSH key on your local machine and add the key to your GitHub account. Here are the steps to set up SSH with GitHub:
+
+Open a terminal on your local machine and type the following command to generate a new SSH key:
+Copy code
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+
+Press Enter to save the key in the default location (~/.ssh/id_rsa) and enter a passphrase. You can also specify a different location for the key by providing a file path after the -f flag.
+
+Once the key is generated, you can view the public key by running the following command:
+
+Copy code
+cat ~/.ssh/id_rsa.pub
+
+
+Copy the entire key that is displayed in the terminal.
+
+Go to your GitHub account settings, and under the "SSH and GPG keys" section, click on "New SSH key".
+
+In the "Title" field, enter a name for the key (e.g. "My laptop").
+
+In the "Key" field, paste the public key that you copied in step 4.
+
+Click on "Add SSH key" to save the key.
+
+To test the connection, run the following command:
+
+Copy code
+ssh -T git@github.com
+
+
+You should see a message indicating that you've successfully authenticated with GitHub. From now on, you can use SSH to interact with your GitHub repositories.
+
+You can also add the ssh key to your ssh-agent to avoid having to re-enter your passphrase every time you connect to a remote.
+Please refer to GitHub documentation for more information on how to set up SSH with GitHub.
+--------------------------
+how to get the current repo url and of a folder and set this url by a git command
+--------------------------
+You can use the git remote -v command to view the remote repository URLs for the current repository. This command will show you the URLs for both the fetch and push remote for the current repository.
+
+Copy code
+git remote -v
+
+
+To set the remote repository URL for a repository, you can use the git remote set-url command. This command allows you to change the URL of a remote repository.
+
+Copy code
+git remote set-url <remote-name> <new-url>
+
+
+You need to replace <remote-name> with the name of the remote and <new-url> with the new URL of the remote repository.
+
+For example, if you want to change the URL of the "origin" remote to https://github.com/username/newrepo.git you would use the following command:
+
+Copy code
+git remote set-url origin https://github.com/username/newrepo.git
+
+
+If you don't know the name of the remote, you can use git remote -v command as I mentioned before and it will list all remotes and their URLs.
+
+Please note that these commands need to be run from within the local repository folder on your machine.
+You can navigate to the folder by using the command cd <folder-path>
+
+Also, be aware that changing the remote URL may have consequences depending on your use case, such as losing commits or losing the connection with the previous remote repository.
