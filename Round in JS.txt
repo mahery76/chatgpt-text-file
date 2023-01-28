@@ -1,0 +1,9 @@
+How to round float in javascript
+--------------------------
+You can use the Math.round() function to round a float to the nearest integer in JavaScript. For example, Math.round(3.14) would return 3, and Math.round(3.6) would return 4.
+
+You can also use the Math.floor() function to round down to the nearest integer, or the Math.ceil() function to round up to the nearest integer.
+
+To round to a specific decimal place, you can use the toFixed() method. For example, 3.14159265358979323846.toFixed(2) would return "3.14"
+
+You can also use Number.prototype.toFixed(n) to round a number to n decimal places.

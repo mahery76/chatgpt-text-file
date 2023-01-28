@@ -1,0 +1,49 @@
+Whay is JavaScript main role in the field of artificial intelligence ?
+--------------------------
+JavaScript is not typically used as a primary programming language for artificial intelligence (AI) development, as it is mainly used for web development and creating interactive front-end interfaces. However, JavaScript can be used to implement certain types of AI algorithms, such as natural language processing or machine learning in web browsers, and it can also be used to develop web-based AI applications. Additionally, JavaScript can be used with libraries and frameworks such as TensorFlow.js, which allows machine learning models to be trained and run in web browsers, making AI more accessible for web developers.
+--------------------------
+What does make web-based AI application so special compared to the other AI application
+--------------------------
+Web-based AI applications are special because they allow for easy access and deployment of AI models and algorithms to a wide range of users through a web browser. This can make AI more accessible to individuals and organizations who may not have the resources or expertise to develop and deploy AI models on their own.
+
+Web-based AI applications also have the advantage of being able to run on a variety of devices, including smartphones and tablets, which can expand the reach and impact of the AI. Additionally, web-based AI applications can be integrated with other web-based tools and services, such as cloud storage and databases, to create more powerful and sophisticated AI solutions.
+
+Another advantage of web-based AI applications is that they can be easily updated and maintained, which can be important for ensuring that the AI models and algorithms are performing optimally.
+
+Finally, web-based AI application can be accessed by any device that has internet connection and browser, this can make the AI accessible for people in remote areas, or for people with limited resources, who may not have access to powerful computers or specialized software.
+--------------------------
+Could you give me some examples of famous Web-based application ?
+--------------------------
+Yes, here are a few examples of famous web-based AI applications:
+
+Google Translate: This is a web-based AI application that allows users to translate text from one language to another. It uses machine learning to provide translations that are more accurate and natural-sounding.
+
+Amazon's Personalize: This is a web-based AI service that allows businesses to personalize their e-commerce site and product recommendations for their customers. It uses machine learning to analyze customer data and create personalized experiences.
+
+IBM Watson Studio: Watson Studio is a web-based AI platform that allows businesses to develop, train, and deploy AI models and algorithms. It provides a variety of tools and resources for data scientists, developers, and business analysts to work together to create AI solutions.
+
+OpenAI's GPT-3 Playground: GPT-3 Playground is a web-based AI application that allows users to test and experiment with OpenAI's powerful GPT-3 AI model. It allows users to generate text, code, and other types of content based on their prompts.
+
+TensorFlow Playground: TensorFlow Playground is a web-based AI application that allows users to experiment with neural network models and test different configurations. It is a useful tool for learning about neural networks and machine learning.
+
+DeepArt.io: DeepArt.io is a web-based AI application that allows users to upload their own pictures and turn them into artworks by using neural-networks. It uses a deep learning algorithm to transform the image into a style of a famous painting.
+--------------------------
+So what are the primary programming language used by those applications ?
+--------------------------
+The primary programming languages used to develop web-based AI applications can vary depending on the specific application and the technology stack it is built on. Some common languages used to develop web-based AI applications include:
+
+JavaScript: As it is widely supported by web browsers and can be used to develop interactive front-end interfaces, JavaScript is a popular choice for developing web-based AI applications.
+
+Python: Python is a popular language for developing AI applications due to its simplicity and ease of use. It has a wide range of libraries and frameworks for machine learning and data analysis, such as TensorFlow and scikit-learn.
+
+Java: Java is a widely-used programming language that can be used for developing web applications. It can be used to develop web-based AI applications by using libraries such as Weka and Deeplearning4j
+
+C#: C# is a programming language developed by Microsoft and it is widely used to develop web-based AI applications that run on the .NET Framework.
+
+Go: Go is a programming language created by Google, it's designed to be efficient and it's suitable for developing web-based AI applications that require high performance or low latency.
+
+Ruby: Ruby is an open-source programming language that is often used in web development. It has several libraries and frameworks for machine learning, such as RubyFann and Machine Learning Ruby.
+
+R: R is a programming language and environment used for statistical computing and graphics, it's a popular choice among data scientists and statisticians.
+
+It's worth to mention that many of those web-based AI applications are built on top of web frameworks such as Ruby on Rails, Django, and Flask, which can help to simplify the development process and make it more efficient.
